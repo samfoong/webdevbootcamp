@@ -19,3 +19,12 @@ $("li").click(function() {
         //     });
         // }
 });
+
+//Click on X to delete Todo
+$("span").click(function(event){
+    $(this).parent().fadeOut(500,function(){   //.parent gives us the li
+        $(this).remove();  
+    });    
+    event.stopPropagation();    //prevents it from bubbling up to parent's elements(jquery method)
+});
+
