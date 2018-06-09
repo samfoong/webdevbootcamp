@@ -37,3 +37,8 @@ $("input[type='text']").keypress(function(event){
         $("ul").append("<li><span><i class='fa fa-trash'></i></span> " + todoText + "</li>")  //append will take li and add to ul
     }
 });  
+
+//Function to toggle in input box in and out
+$(".fa-plus").click(function(){
+    $("input[type='text']").fadeToggle();
+});
